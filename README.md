@@ -91,3 +91,9 @@ Generate the routes for the style guide with a command line command:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Project Management
+
+We are using this repo's [Github issues](https://github.com/jasonramirez/design_origami/issues)
+to manage features in the works, feature requests, bugs and all questions
+related to this gem.
