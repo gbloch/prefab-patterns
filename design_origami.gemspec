@@ -8,8 +8,13 @@ Gem::Specification.new do |spec|
   spec.version       = DesignOrigami::VERSION
   spec.authors       = ["Jason Ramirez"]
   spec.email         = ["ramirez676@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{A tool to add design patterns to your code base.}
+  spec.description   = %q{A tool to add design patterns into your code base 
+                          that follow a highly opinionated directory structure
+                          and encourage standardized patterns. No more copy
+                          pasta. As an added benefit you get a living
+                          styleguide that genuinely reflects the use of your
+                          design patterns}
   spec.homepage      = ""
   spec.license       = "MIT"
 
