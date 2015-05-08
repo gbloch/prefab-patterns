@@ -39,50 +39,51 @@ a library into your code base:
 
 ```
   $ patterns import card
-
-  # app/views/patterns/card.html
-  # app/assets/scripts/patterns/card.js
-  # app/assets/styles/patterns/card.scss
 ```
+
+**Should create these files:**
+
+`app/views/patterns/card.html.erb`
+
+`app/assets/scripts/patterns/card.coffee`
+
+`app/assets/styles/patterns/card.scss`
 
 #### Rendering the pattern
 
 We use a simple method to render a design pattern into your markup. You pass
 `locales` to populate the content of the pattern:
 
-```
-  object.each do
-    render_pattern(:card,
-      title: object.title,
-      body_text: object.body_text
-    );
-  end
+```erb
+<%= render_pattern(:card, title: "title", text: "some text"); %>
 ```
 
-```
-  render_pattern(:card,
-    title: "Title"
-    body_text: "Body Text"
-  );
+```erb
+<%= object.each do %>
+  <%= render_pattern(:card, title: object.title, text: object.text); %>
+<% end %>
 ```
 
 #### Styleguide
 
 Generate the routes for the style guide with a command line command:
 
-```
-  $ patterns generate styleguide
+    $ patterns generate styleguide
 
-  # app/controllers/patterns_controller.rb
-  # app/views/patterns/styleguide.html
-  # routes.rb ... modified
-```
+**Should create these files:**
 
-## To Do:
+`app/controllers/patterns_controller.rb`
 
-* Taxonomy of patterns (maybe via directory structure)
-* Add typography etc.
-* Repo/website of design patterns made by contributors
+`app/views/patterns/styleguide.html.erb`
+
+**And modify:**
+
+`routes.rb`
+
+## The Vision
+
+* Taxonomy of patterns (maybe via directory structure).
+* Repo/website where design patterns can you can `import` from.
 
 ## Contributing
 
