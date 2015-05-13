@@ -1,4 +1,4 @@
-require "rails_helper"
+require "dummy/spec/rails_helper"
 
 RSpec.describe "View helpers", type: :feature do
   it "renders the pattern" do

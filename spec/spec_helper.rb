@@ -1,13 +1,17 @@
 ENV["RAILS_ENV"] ||= "test"
 
 require "design_origami"
+require "pry-byebug"
 require "rspec"
+require "webmock/rspec"
 
 require File.expand_path(
   "../../spec/dummy/config/environment.rb",  __FILE__
 )
 
 RSpec.configure do |config|
+  WebMock.disable_net_connect!(allow_localhost: true)
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end

@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "design_origami/cli"
+
+DesignOrigami::CLI.start(ARGV)
