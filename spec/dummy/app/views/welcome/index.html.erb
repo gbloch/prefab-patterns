@@ -1,1 +1,11 @@
-<%= render_pattern("card", title: "My Card") %>
+<div id="no_arguments">
+  <%= render_pattern("card") %>
+</div>
+
+<div id="one_argument">
+  <%= render_pattern("card", title: "Title") %>
+</div>
+
+<div id="two_arguments">
+  <%= render_pattern("card", description: "description", title: "Title") %>
+</div>
