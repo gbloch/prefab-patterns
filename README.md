@@ -2,11 +2,11 @@
 
 Use the **design-origami** gem to import design patterns into your rails
 app from the command line. All the patterns are imported from [design
-takeout](design-takeout.herokuapp.com). The patterns are very
-opinionater; from their file location to the markup itself. The objective
+takeout](https://design-takeout.herokuapp.com). The patterns are very
+opinionated; from their file location to the markup itself. The objective
 of the **design-origami-gem** and **design-takeout** are to encourage
 scalability of an app, the standardization of patterns via views, and to
-be able to generate a true living styleguide. No more copy pasta. 
+be able to generate a true living style guide. No more copy pasta. 
 
 We got our idea for rendering design patterns using a method from
 [Mountain View](https://github.com/jgnatch/mountain_view), and the notion
