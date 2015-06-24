@@ -1,13 +1,17 @@
 # DesignOrigami
 
-A tool to add design patterns into your code base that follow a highly
-opinionated directory structure and encourage standardized patterns. No more
-copy pasta. As an added benefit you get a living styleguide that genuinely
-reflects the use of your design patterns.
+Use the **design-origami** gem to import design patterns into your rails
+app from the command line. All the patterns are imported from [design
+takeout](design-takeout.herokuapp.com). The patterns are very
+opinionater; from their file location to the markup itself. The objective
+of the **design-origami-gem** and **design-takeout** are to encourage
+scalability of an app, the standardization of patterns via views, and to
+be able to generate a true living styleguide. No more copy pasta. 
 
-We got our ideas for rendering design patterns using a method from [Mountain
-View](https://github.com/jgnatch/mountain_view), and the notion for pre-made
-design patterns from [Refills](https://github.com/thoughtbot/refills).
+We got our idea for rendering design patterns using a method from
+[Mountain View](https://github.com/jgnatch/mountain_view), and the notion
+for pre-made design patterns from
+[Refills](https://github.com/thoughtbot/refills).
 
 ## Installation
 
@@ -19,40 +23,44 @@ gem 'design_origami'
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install design_origami
-
-## Usage (NOTHING ACTUALLY WORKS!)
-
-This is currently an idea, and we are working to implement it. We hope that
-eventually the usage will be as seen below. We are posting it here in the README
-for anyone who would like to comment on the features, commands or any aspect of
-this Gem.
-
-#### Generating the patterns
-
-Scaffolding via a command line tool that pulls (maybe via curl) patterns from
-a library into your code base:
-
-```
-  $ patterns import card
+```bash
+$ gem install design_origami
 ```
 
-**Should create these files:**
+## Usage
 
-`app/views/patterns/card.html.erb`
+### Import a pattern
 
-`app/assets/scripts/patterns/card.coffee`
+With design_origami you can import a pattern directly into your rails
+app. The directory structure is highly opinionated, so at this time we
+don't allow for any customization of file placement.
 
-`app/assets/styles/patterns/card.scss`
+To import a pattern into your rails app from the command line:
 
-#### Rendering the pattern
+```bash
+$ design_orgami import pattern_name
+```
 
-We use a simple method to render a design pattern into your markup. You pass
-`locales` to populate the content of the pattern:
+Will create these files:
+
+  * `app/views/patterns/pattern_name.html.erb`
+
+  * `app/assets/scripts/patterns/pattern_name.coffee`
+
+  * `app/assets/styles/patterns/pattern_name.scss`
+
+  * Importing a pattern will overwrite files without warning.
+
+### Render a pattern
+
+We use a helper method to render a design pattern into your markup. You
+pass `locales` to populate the content of the pattern:
 
 ```erb
 <%= render_pattern(:card, title: "title", text: "some text"); %>
@@ -64,26 +72,38 @@ We use a simple method to render a design pattern into your markup. You pass
 <% end %>
 ```
 
-#### Styleguide
+### Generate Your Style guide (not available yet)
 
-Generate the routes for the style guide with a command line command:
+You can generate a style guide that will show you all of the patterns in
+your application. Generate the routes for the style guide with the
+following command line command:
 
-    $ patterns generate styleguide
+```bash
+$ patterns generate style_guide
+```
 
-**Should create these files:**
+Will create these files:
 
-`app/controllers/patterns_controller.rb`
+  * `app/controllers/patterns_controller.rb`
 
-`app/views/patterns/styleguide.html.erb`
+  * `app/views/patterns/style_guide.html.erb`
 
-**And modify:**
+And modify:
 
-`routes.rb`
+  * `routes.rb`
 
-## The Vision
+## Project Management
 
-* Taxonomy of patterns (maybe via directory structure).
-* Repo/website where design patterns can you can `import` from.
+We are using this repo's [Github
+issues](https://github.com/jasonramirez/design_origami/issues)
+to manage features in the works, feature requests, bugs and
+all questions related to this gem.
+
+## Known issues
+
+This gem is currently at version 0.0.1 so use at your own risk.
+
+* Importing a pattern will overwrite files without warning.
 
 ## Contributing
 
@@ -92,9 +112,3 @@ Generate the routes for the style guide with a command line command:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
-
-## Project Management
-
-We are using this repo's [Github issues](https://github.com/jasonramirez/design_origami/issues)
-to manage features in the works, feature requests, bugs and all questions
-related to this gem.
