@@ -12,17 +12,17 @@ module DesignOrigami
     end
 
     def source
-      path.send("#{@type}_source")
+      file_path.send("#{@type}_source")
     end
 
     def destination
-      path.send("#{@type}_destination")
+      file_path.send("#{@type}_destination")
     end
 
     private
 
-    def path
-      FilePath.new(@pattern)
+    def file_path
+      @file_path ||= FilePath.new(@pattern)
     end
   end
 end
