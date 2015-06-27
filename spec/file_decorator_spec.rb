@@ -15,13 +15,13 @@ RSpec.describe DesignOrigami::FileDecorator do
 
   describe "file_attributes.source" do
     it "returns the file source" do
-      expect(@file_attributes.source).to eq "http://example.com/card/card.html.erb"
+      expect(@file_attributes.source).to eq "http://example.com/app/views/patterns/_card.html.erb"
     end
   end
 
   describe "file_attributes.destination" do
     it "returns the file destination" do
-      expect(@file_attributes.destination).to eq "app/views/patterns/card.html.erb"
+      expect(@file_attributes.destination).to eq "app/views/patterns/_card.html.erb"
     end
   end
 end

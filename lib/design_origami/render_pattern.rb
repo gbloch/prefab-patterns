@@ -22,7 +22,7 @@ module DesignOrigami
     end
 
     def view_file_name
-      "#{pattern}.html.erb"
+      "_#{pattern}.html.erb"
     end
   end
 end

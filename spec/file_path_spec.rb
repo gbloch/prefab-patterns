@@ -10,7 +10,7 @@ RSpec.describe DesignOrigami::FilePath do
     it "returns the correct source to import HTML from" do
       result = @path.html_source
 
-      expect(result).to eq "http://example.com/pattern/pattern.html.erb"
+      expect(result).to eq "http://example.com/app/views/patterns/_pattern.html.erb"
     end
   end
 
@@ -18,25 +18,25 @@ RSpec.describe DesignOrigami::FilePath do
     it "returns the correct absolute path to copy the HTML file to" do
       result = @path.html_destination
 
-      html_path = "app/views/patterns/pattern.html.erb"
+      html_path = "app/views/patterns/_pattern.html.erb"
       expect(result).to eq html_path
     end
   end
 
-  describe "#scripts_source" do
+  describe "#javascript_source" do
     it "returns the correct source to import Coffee from" do
-      result = @path.script_source
+      result = @path.javascript_source
 
-      expect(result).to eq "http://example.com/pattern/pattern.coffee"
+      expect(result).to eq "http://example.com/app/assets/javascripts/patterns/pattern.coffee"
     end
   end
 
-  describe "#script_destination" do
+  describe "#javascript_destination" do
     it "returns the correct absolute path to copy the Coffee file to" do
-      result = @path.script_destination
+      result = @path.javascript_destination
 
-      script_path = "app/assets/scripts/patterns/pattern.coffee"
-      expect(result).to eq script_path
+      javascript_path = "app/assets/javascripts/patterns/pattern.coffee"
+      expect(result).to eq javascript_path
     end
   end
 
@@ -44,7 +44,7 @@ RSpec.describe DesignOrigami::FilePath do
     it "returns the correct source to import Scss from" do
       result = @path.stylesheet_source
 
-      expect(result).to eq "http://example.com/pattern/pattern.scss"
+      expect(result).to eq "http://example.com/app/assets/stylesheets/patterns/_pattern.scss"
     end
   end
 
@@ -52,7 +52,7 @@ RSpec.describe DesignOrigami::FilePath do
     it "returns the correct absolute path to copy the Scss file to" do
       result = @path.stylesheet_destination
 
-      scss_path = "app/assets/stylesheets/patterns/pattern.scss"
+      scss_path = "app/assets/stylesheets/patterns/_pattern.scss"
       expect(result).to eq scss_path
     end
   end

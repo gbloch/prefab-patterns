@@ -5,27 +5,27 @@ module DesignOrigami
     end
 
     def html_source
-      File.join(FILE_PATH, @pattern, "#{@pattern}.html.erb")
+      File.join(FILE_PATH, html_root, "_#{@pattern}.html.erb")
     end
 
     def html_destination
-      File.join(html_root, "#{@pattern}.html.erb")
+      File.join(html_root, "_#{@pattern}.html.erb")
     end
 
     def stylesheet_source
-      File.join(FILE_PATH, @pattern, "#{@pattern}.scss")
+      File.join(FILE_PATH, stylesheet_root, "_#{@pattern}.scss")
     end
 
     def stylesheet_destination
-      File.join(stylesheet_root, "#{@pattern}.scss")
+      File.join(stylesheet_root, "_#{@pattern}.scss")
     end
 
-    def script_source
-      File.join(FILE_PATH, @pattern, "#{@pattern}.coffee")
+    def javascript_source
+      File.join(FILE_PATH, javascript_root, "#{@pattern}.coffee")
     end
 
-    def script_destination
-      File.join(script_root, "#{@pattern}.coffee")
+    def javascript_destination
+      File.join(javascript_root, "#{@pattern}.coffee")
     end
 
     private
@@ -34,8 +34,8 @@ module DesignOrigami
       File.join("app", "assets", "stylesheets", "patterns")
     end
 
-    def script_root
-      File.join("app", "assets", "scripts", "patterns")
+    def javascript_root
+      File.join("app", "assets", "javascripts", "patterns")
     end
 
     def html_root

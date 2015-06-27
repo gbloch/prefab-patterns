@@ -13,9 +13,9 @@ RSpec.describe DesignOrigami::ImportPattern do
       import_pattern = DesignOrigami::ImportPattern.new("card")
       import_pattern.import_pattern
 
-      expect(File).to exist "app/assets/stylesheets/patterns/card.scss"
-      expect(File).to exist "app/assets/scripts/patterns/card.coffee"
-      expect(File).to exist "app/views/patterns/card.html.erb"
+      expect(File).to exist "app/assets/stylesheets/patterns/_card.scss"
+      expect(File).to exist "app/assets/javascripts/patterns/card.coffee"
+      expect(File).to exist "app/views/patterns/_card.html.erb"
     end
   end
 

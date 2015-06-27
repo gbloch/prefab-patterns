@@ -19,7 +19,7 @@ module DesignOrigami
     private
 
     def pattern_file_types
-      ["html", "script", "stylesheet"]
+      ["html", "javascript", "stylesheet"]
     end
   end
 end
