@@ -9,8 +9,14 @@ require File.expand_path(
   "../../spec/dummy/config/environment.rb",  __FILE__
 )
 
+Dir[File.expand_path("spec/support/*.rb")].each do |file|
+  require file 
+end
+
 RSpec.configure do |config|
   WebMock.disable_net_connect!(allow_localhost: true)
+
+  config.include StubHelper
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

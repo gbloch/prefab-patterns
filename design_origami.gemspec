@@ -23,13 +23,15 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "curb"
-  spec.add_dependency "rails"
-  spec.add_dependency "thor"
+  spec.add_runtime_dependency "curb"
+  spec.add_runtime_dependency "ejs"
+  spec.add_runtime_dependency "konacha"
+  spec.add_runtime_dependency "thor"
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "capybara"
   spec.add_development_dependency "pry-byebug"
+  spec.add_development_dependency "rails"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-rails"
