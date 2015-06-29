@@ -9,8 +9,10 @@ module DesignOrigami
     end
 
     def create_path_and_file
-      create_path
-      create_file
+      unless file_contents == ""
+        create_path
+        create_file
+      end
     end
 
     private
