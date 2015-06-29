@@ -26,17 +26,54 @@ RSpec.describe DesignOrigami::FilePath do
   describe "#javascript_source" do
     it "returns the correct source to import Coffee from" do
       result = @path.javascript_source
+      source = "http://example.com/app/assets/javascripts/patterns/pattern.coffee"
 
-      expect(result).to eq "http://example.com/app/assets/javascripts/patterns/pattern.coffee"
+      expect(result).to eq source
     end
   end
 
   describe "#javascript_destination" do
     it "returns the correct absolute path to copy the Coffee file to" do
       result = @path.javascript_destination
+      destination = "app/assets/javascripts/patterns/pattern.coffee"
 
-      javascript_path = "app/assets/javascripts/patterns/pattern.coffee"
-      expect(result).to eq javascript_path
+      expect(result).to eq destination
+    end
+  end
+
+  describe "#spec_source" do
+    it "returns the correct source to import specs from" do
+      result = @path.spec_source
+      source = "http://example.com/spec/javascripts/pattern_spec.coffee"
+
+      expect(result).to eq source
+    end
+  end
+
+  describe "#spec_destination" do
+    it "returns the correct absolute path to copy the spec file to" do
+      result = @path.spec_destination
+      destination = "spec/javascripts/pattern_spec.coffee"
+
+      expect(result).to eq destination
+    end
+  end
+
+  describe "#spec_template_source" do
+    it "returns the correct source to import spec templates from" do
+      result = @path.spec_template_source
+      source = "http://example.com/spec/javascripts/templates/pattern.jst.ejs"
+
+      expect(result).to eq source
+    end
+  end
+
+  describe "#spec_template_destination" do
+    it "returns the correct absolute path to copy the spec file to" do
+      result = @path.spec_template_destination
+      destination = "spec/javascripts/templates/pattern.jst.ejs"
+
+      expect(result).to eq destination
     end
   end
 
