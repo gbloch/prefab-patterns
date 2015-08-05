@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "prefab_patterns/cli"
+
+PrefabPatterns::CLI.start(ARGV)

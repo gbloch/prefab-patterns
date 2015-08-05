@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe DesignOrigami::ImportPattern do
+RSpec.describe PrefabPatterns::ImportPattern do
   after do
     FileUtils.remove_dir("app", force: true)
   end
@@ -10,7 +10,7 @@ RSpec.describe DesignOrigami::ImportPattern do
       stub_const("FILE_PATH", "http://example.com/")
       stub_request_for_source_file
 
-      import_pattern = DesignOrigami::ImportPattern.new("card")
+      import_pattern = PrefabPatterns::ImportPattern.new("card")
       import_pattern.import_pattern
 
       expect(File).to exist "app/assets/stylesheets/patterns/_card.scss"

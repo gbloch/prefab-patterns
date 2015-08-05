@@ -1,6 +1,6 @@
 ENV["RAILS_ENV"] ||= "test"
 
-require "design_origami"
+require "prefab_patterns"
 require "pry-byebug"
 require "rspec"
 require "webmock/rspec"

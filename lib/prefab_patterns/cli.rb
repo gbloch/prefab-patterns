@@ -1,11 +1,11 @@
-require "design_origami"
+require "prefab_patterns"
 require "thor"
 
-module DesignOrigami
+module PrefabPatterns
   class CLI < Thor
     desc "import PATTERN", "PATTERN imported"
     def import(pattern)
-      DesignOrigami::ImportPattern.new(pattern).import_pattern
+      PrefabPatterns::ImportPattern.new(pattern).import_pattern
 
       puts "#{pattern} imported"
     end

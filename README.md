@@ -1,12 +1,12 @@
-# DesignOrigami
+# PrefabPatterns
 
-Use the **design-origami** gem to import design patterns into your rails
-app from the command line. All the patterns are imported from [design
-takeout](https://design-takeout.herokuapp.com). The patterns are very
-opinionated; from their file location to the markup itself. The objective
-of the **design-origami-gem** and **design-takeout** are to encourage
-scalability of an app, the standardization of patterns via views, and to
-be able to generate a true living style guide. No more copy pasta. 
+Use the **prefab-patterns** gem to import design patterns into your rails app
+from the command line. All the patterns are imported from [prefab patterns
+marketplace](https://prefab-patterns-marketplace.herokuapp.com). The patterns
+are very opinionated; from their file location to the markup itself. The
+objective of the **prefab-patterns-gem** and **prefab-patterns-marketplace** are
+to encourage scalability of an app, the standardization of patterns via views,
+and to be able to generate a true living style guide. No more copy pasta. 
 
 We got our idea for rendering design patterns using a method from
 [Mountain View](https://github.com/jgnatch/mountain_view), and the notion
@@ -18,7 +18,7 @@ for pre-made design patterns from
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'design_origami'
+gem 'prefab_patterns'
 ```
 
 And then execute:
@@ -30,21 +30,21 @@ $ bundle
 Or install it yourself as:
 
 ```bash
-$ gem install design_origami
+$ gem install prefab_patterns
 ```
 
 ## Usage
 
 ### Import a pattern
 
-With design_origami you can import a pattern directly into your rails
+With prefab_patterns you can import a pattern directly into your rails
 app. The directory structure is highly opinionated, so at this time we
 don't allow for any customization of file placement.
 
 To import a pattern into your rails app from the command line:
 
 ```bash
-$ design_orgami import pattern_name
+$ prefab_patterns import pattern_name
 ```
 
 Will create these files:
@@ -95,7 +95,7 @@ And modify:
 ## Project Management
 
 We are using this repo's [Github
-issues](https://github.com/jasonramirez/design_origami/issues)
+issues](https://github.com/jasonramirez/prefab-patterns/issues)
 to manage features in the works, feature requests, bugs and
 all questions related to this gem.
 
@@ -107,7 +107,7 @@ This gem is currently at version 0.0.1 so use at your own risk.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/design_origami/fork )
+1. Fork it ( https://github.com/[my-github-username]/prefab-patterns/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

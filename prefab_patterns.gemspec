@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'design_origami/version'
+require 'prefab_patterns/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "design_origami"
-  spec.version       = DesignOrigami::VERSION
+  spec.name          = "prefab_patterns"
+  spec.version       = PrefabPatterns::VERSION
   spec.authors       = ["Jason Ramirez"]
   spec.email         = ["ramirez676@gmail.com"]
   spec.summary       = %q{A tool to add design patterns to your code base.}
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = ["design_origami"]
+  spec.executables   = ["prefab_patterns"]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 

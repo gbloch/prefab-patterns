@@ -1,9 +1,9 @@
-require "design_origami"
-require "design_origami/file_creator"
-require "design_origami/file_decorator"
+require "prefab_patterns"
+require "prefab_patterns/file_creator"
+require "prefab_patterns/file_decorator"
 require "net/http"
 
-module DesignOrigami
+module PrefabPatterns
   class ImportPattern
     def initialize(pattern)
       @pattern = pattern

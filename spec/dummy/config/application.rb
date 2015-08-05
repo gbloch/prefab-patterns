@@ -5,7 +5,7 @@ require "action_mailer/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "design_origami"
+require "prefab_patterns"
 
 module Dummy
   class Application < Rails::Application

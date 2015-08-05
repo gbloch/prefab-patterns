@@ -1,6 +1,6 @@
 require "rails"
 
-module DesignOrigami
+module PrefabPatterns
   class RenderPattern
     def initialize(pattern, locals = {})
       @pattern = pattern

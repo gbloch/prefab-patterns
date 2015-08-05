@@ -1,12 +1,12 @@
 require "spec_helper"
 
-RSpec.describe DesignOrigami::RenderPattern do
+RSpec.describe PrefabPatterns::RenderPattern do
   describe "#render_pattern" do
     context "with a single argument" do
       it "renders the pattern on the page" do
         pattern_content = "<div class=\"card\">\nTitle \n</div>\n"
 
-        pattern = DesignOrigami::RenderPattern.new(:card, title: "Title")
+        pattern = PrefabPatterns::RenderPattern.new(:card, title: "Title")
         result = pattern.render_pattern
         expect(result).to eq pattern_content
       end
@@ -16,7 +16,7 @@ RSpec.describe DesignOrigami::RenderPattern do
       it "renders the pattern on the page with the arguments in the correct order" do
         pattern_content = "<div class=\"card\">\nTitle description\n</div>\n"
 
-        pattern = DesignOrigami::RenderPattern.new(
+        pattern = PrefabPatterns::RenderPattern.new(
           :card,
           description: "description",
           title: "Title"
@@ -30,7 +30,7 @@ RSpec.describe DesignOrigami::RenderPattern do
       it "renders the pattern on the page" do
         pattern_content = "<div class=\"card\">\n \n</div>\n"
 
-        pattern = DesignOrigami::RenderPattern.new(:card)
+        pattern = PrefabPatterns::RenderPattern.new(:card)
         result = pattern.render_pattern
         expect(result).to eq pattern_content
       end

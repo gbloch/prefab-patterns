@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe DesignOrigami::FilePath do
+RSpec.describe PrefabPatterns::FilePath do
   before do
-    @path = DesignOrigami::FilePath.new("pattern")
+    @path = PrefabPatterns::FilePath.new("pattern")
     stub_const("FILE_PATH", "http://example.com/")
   end
 

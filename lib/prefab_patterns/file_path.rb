@@ -1,4 +1,4 @@
-module DesignOrigami
+module PrefabPatterns
   class FilePath
     def initialize(pattern)
       @pattern = pattern

@@ -1,6 +1,6 @@
-require "design_origami/file_path"
+require "prefab_patterns/file_path"
 
-module DesignOrigami
+module PrefabPatterns
   class FileDecorator
     def initialize(pattern, type)
       @pattern = pattern

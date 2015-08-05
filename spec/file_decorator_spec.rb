@@ -1,10 +1,10 @@
 require "spec_helper"
 
-RSpec.describe DesignOrigami::FileDecorator do
+RSpec.describe PrefabPatterns::FileDecorator do
   before do
     stub_const("FILE_PATH", "http://example.com/")
 
-    @file_attributes = DesignOrigami::FileDecorator.new("card", "html")
+    @file_attributes = PrefabPatterns::FileDecorator.new("card", "html")
   end
 
   describe "file_attributes.type" do

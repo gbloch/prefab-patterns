@@ -1,7 +1,7 @@
 require "fileutils"
 require "curl"
 
-module DesignOrigami
+module PrefabPatterns
   class FileCreator
     def initialize(file)
       @file_source = file.source
