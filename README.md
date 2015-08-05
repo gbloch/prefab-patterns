@@ -1,4 +1,9 @@
-# PrefabPatterns
+# Prefab Patterns
+
+[![Build Status](https://semaphoreci.com/api/v1/projects/8df9cc81-1674-46bb-ad83-db47325d9816/502915/shields_badge.svg)](https://semaphoreci.com/jasonramirez/prefab-patterns)
+[![Code Climate](https://codeclimate.com/github/jasonramirez/prefab-patterns/badges/gpa.svg)](https://codeclimate.com/github/jasonramirez/prefab-patterns)
+[![Test Coverage](https://codeclimate.com/github/jasonramirez/prefab-patterns/badges/coverage.svg)](https://codeclimate.com/github/jasonramirez/prefab-patterns/coverage)
+[![Dependency Status](https://gemnasium.com/jasonramirez/prefab-patterns.svg)](https://gemnasium.com/jasonramirez/prefab-patterns)
 
 Use the **prefab-patterns** gem to import design patterns into your rails app
 from the command line. All the patterns are imported from [prefab patterns

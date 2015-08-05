@@ -1,3 +1,8 @@
+ENV["CODECLIMATE_REPO_TOKEN"] = "fa8d7f69014d9cc243ebb7f646d65291a06bd3edee13ba112bb705f0a8e6ebc3"
+
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 ENV["RAILS_ENV"] ||= "test"
 
 require "prefab_patterns"
@@ -10,7 +15,10 @@ require File.expand_path(
 )
 
 RSpec.configure do |config|
-  WebMock.disable_net_connect!(allow_localhost: true)
+  WebMock.disable_net_connect!(
+    allow_localhost: true,
+    allow: "codeclimate.com"
+  )
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
