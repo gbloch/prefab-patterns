@@ -23,19 +23,13 @@ for pre-made design patterns from
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'prefab_patterns'
+gem "prefab_patterns", git: 'git://github.com/jasonramirez/prefab-patterns.git'
 ```
 
 And then execute:
 
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-
-```bash
-$ gem install prefab_patterns
 ```
 
 ## Usage
