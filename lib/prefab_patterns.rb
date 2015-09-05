@@ -1,4 +1,6 @@
+require "rails"
 require "prefab_patterns/version"
+require "prefab_patterns/engine"
 require "prefab_patterns/render_pattern"
 require "prefab_patterns/import_pattern"
 require "prefab_patterns/railtie" if defined?(Rails)

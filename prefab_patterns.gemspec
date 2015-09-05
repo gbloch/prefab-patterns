@@ -1,4 +1,5 @@
 # coding: utf-8
+# $:.push File.expand_path("../lib", __FILE__)
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'prefab_patterns/version'
@@ -9,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jason Ramirez"]
   spec.email         = ["ramirez676@gmail.com"]
   spec.summary       = %q{A tool to add design patterns to your code base.}
-  spec.description   = %q{A tool to add design patterns into your code base 
+  spec.description   = %q{A tool to add design patterns into your code base
                           that follow a highly opinionated directory structure
                           and encourage standardized patterns. No more copy
                           pasta. As an added benefit you get a living
@@ -34,5 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-rails"
+  spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "webmock"
 end
