@@ -6,20 +6,19 @@ RSpec.describe PrefabPatterns::FilePath do
     stub_const("FILE_PATH", "http://example.com/")
   end
 
-  describe "#html_source" do
+  describe "#view_source" do
     it "returns the correct source to import HTML from" do
-      result = @path.html_source
+      result = @path.view_source
 
       expect(result).to eq "http://example.com/app/views/patterns/_pattern.html.erb"
     end
   end
 
-  describe "#html_destination" do
+  describe "#view_destination" do
     it "returns the correct absolute path to copy the HTML file to" do
-      result = @path.html_destination
+      result = @path.view_destination
 
-      html_path = "app/views/patterns/_pattern.html.erb"
-      expect(result).to eq html_path
+      expect(result).to eq view_path("pattern")
     end
   end
 
@@ -35,8 +34,7 @@ RSpec.describe PrefabPatterns::FilePath do
     it "returns the correct absolute path to copy the Coffee file to" do
       result = @path.javascript_destination
 
-      javascript_path = "app/assets/javascripts/patterns/pattern.coffee"
-      expect(result).to eq javascript_path
+      expect(result).to eq javascript_path("pattern")
     end
   end
 
@@ -52,8 +50,7 @@ RSpec.describe PrefabPatterns::FilePath do
     it "returns the correct absolute path to copy the Scss file to" do
       result = @path.stylesheet_destination
 
-      scss_path = "app/assets/stylesheets/patterns/_pattern.scss"
-      expect(result).to eq scss_path
+      expect(result).to eq stylesheet_path("pattern")
     end
   end
 end

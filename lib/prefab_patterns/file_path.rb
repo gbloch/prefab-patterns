@@ -1,15 +1,17 @@
+require "rails"
+
 module PrefabPatterns
   class FilePath
     def initialize(pattern)
       @pattern = pattern
     end
 
-    def html_source
-      File.join(FILE_PATH, html_root, "_#{@pattern}.html.erb")
+    def view_source
+      File.join(FILE_PATH, view_root, "_#{@pattern}.html.erb")
     end
 
-    def html_destination
-      File.join(html_root, "_#{@pattern}.html.erb")
+    def view_destination
+      File.join(Rails.root, view_root, "_#{@pattern}.html.erb")
     end
 
     def stylesheet_source
@@ -17,7 +19,7 @@ module PrefabPatterns
     end
 
     def stylesheet_destination
-      File.join(stylesheet_root, "_#{@pattern}.scss")
+      File.join(Rails.root, stylesheet_root, "_#{@pattern}.scss")
     end
 
     def javascript_source
@@ -25,7 +27,7 @@ module PrefabPatterns
     end
 
     def javascript_destination
-      File.join(javascript_root, "#{@pattern}.coffee")
+      File.join(Rails.root, javascript_root, "#{@pattern}.coffee")
     end
 
     private
@@ -38,7 +40,7 @@ module PrefabPatterns
       File.join("app", "assets", "javascripts", "patterns")
     end
 
-    def html_root
+    def view_root
       File.join("app", "views", "patterns")
     end
   end

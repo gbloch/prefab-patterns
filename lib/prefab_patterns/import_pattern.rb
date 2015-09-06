@@ -19,7 +19,7 @@ module PrefabPatterns
     private
 
     def pattern_file_types
-      ["html", "javascript", "stylesheet"]
+      ["view", "javascript", "stylesheet"]
     end
   end
 end
