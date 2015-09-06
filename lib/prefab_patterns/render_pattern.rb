@@ -22,7 +22,7 @@ module PrefabPatterns
     end
 
     def view_file_name
-      "_#{pattern}.html.erb"
+      "_#{pattern}"
     end
   end
 end
