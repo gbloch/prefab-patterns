@@ -1,0 +1,20 @@
+body {
+  font-family: "Helvetica", "Arial", sans-serf;
+  padding: 2rem;
+}
+
+pre {
+  overflow: scroll;
+}
+
+.patterns {
+  padding-left: 240px;
+}
+
+.toggle-container__trigger {
+  margin-top: 2rem;
+}
+
+.toggle-container__target.hidden {
+  display: none;
+}

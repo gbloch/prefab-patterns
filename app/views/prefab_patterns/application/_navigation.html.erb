@@ -1,0 +1,16 @@
+<nav class="prefab-styleguide-nav">
+  <a href="/">Home</a>
+
+  <div class="toggle-container">
+    <h4 href="#" class="toggle-container__trigger">
+      Prefab Patterns
+    </h4>
+    <div class="toggle-container__target">
+      <% @patterns.each do |pattern| %>
+        <a href="#<%= pattern.name %>">
+          <%= pattern.name %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</nav>

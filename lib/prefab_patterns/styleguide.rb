@@ -6,11 +6,15 @@ module PrefabPatterns
     def all_patterns
       all_files = []
       Dir.foreach(views_path) do |file|
-        next if file == "." or file == ".."
+        next if is_hidden_and_is_not_partial?(file)
         file_name = file_name_with_no_underscore_or_extension(file)
         all_files << decorated_file(file_name)
       end
       all_files
+    end
+
+    def is_hidden_and_is_not_partial?(file)
+      file == "." || file == ".." || file.match(/^_/).nil?
     end
 
     def decorated_file(file_name)
@@ -18,8 +22,8 @@ module PrefabPatterns
 
       decorated_file.name = file_name
       decorated_file.view_path = file_path?(view_path(file_name))
-      decorated_file.stylesheet = file_path?(stylesheet_path(file_name))
-      decorated_file.javascript = file_path?(javascript_path(file_name))
+      decorated_file.stylesheet_path = file_path?(stylesheet_path(file_name))
+      decorated_file.javascript_path = file_path?(javascript_path(file_name))
 
       decorated_file
     end

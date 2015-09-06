@@ -28,8 +28,8 @@ RSpec.describe PrefabPatterns::Styleguide do
         decorated_object = @styleguide.decorated_file("card")
 
         expect(decorated_object.view_path).to eq view_path("card")
-        expect(decorated_object.stylesheet).to eq stylesheet_path("card")
-        expect(decorated_object.javascript).to eq javascript_path("card")
+        expect(decorated_object.stylesheet_path).to eq stylesheet_path("card")
+        expect(decorated_object.javascript_path).to eq javascript_path("card")
       end
     end
   end

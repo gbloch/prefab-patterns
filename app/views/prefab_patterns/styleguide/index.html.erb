@@ -1,1 +1,36 @@
-This is the styleguide!
+<%= stylesheet_link_tag "application", media: "all" %>
+<%= javascript_include_tag "application" %>
+
+<section class="patterns">
+  <% @patterns.each do |pattern| %>
+    <a id="<%= pattern.name %>"></a>
+
+    <h2>
+      <%= pattern.name %>
+    </h2>
+
+    <%= render_pattern(pattern.name.to_sym) %>
+
+    <div class="toggle-container">
+      <button class="toggle-container__trigger">Show/Hide Code</button>
+      <div class="toggle-container__target hidden">
+        <% unless pattern.view_path.nil? %>
+          HTML
+          <pre><code><%= File.read(pattern.view_path) %></code></pre>
+        <% end %>
+
+        <% unless pattern.stylesheet_path.nil? %>
+          Scss
+          <pre><code><%= File.read(pattern.stylesheet_path) %></code></pre>
+        <% end %>
+
+        <% unless pattern.javascript_path.nil? %>
+          Coffee
+          <pre><code><%= File.read(pattern.javascript_path) %></code></pre>
+        <% end %>
+      </div>
+    </div>
+
+    <hr/>
+  <% end %>
+</section>
