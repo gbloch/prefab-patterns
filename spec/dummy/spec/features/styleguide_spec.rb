@@ -6,7 +6,7 @@ RSpec.describe "styleguide", type: :feature do
 
       visit "/styleguide"
 
-      expect(page).to have_content "This is the styleguide"
+      expect(page).to have_content "Prefab Patterns"
     end
   end
 end

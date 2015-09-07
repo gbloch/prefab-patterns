@@ -4,7 +4,8 @@ RSpec.describe PrefabPatterns::FileDecorator do
   before do
     stub_const("FILE_PATH", "http://example.com/")
 
-    @file_attributes = PrefabPatterns::FileDecorator.new("card", "view")
+    @pattern_name = "card"
+    @file_attributes = PrefabPatterns::FileDecorator.new(@pattern_name, "view")
   end
 
   describe "file_attributes.type" do
@@ -15,13 +16,13 @@ RSpec.describe PrefabPatterns::FileDecorator do
 
   describe "file_attributes.source" do
     it "returns the file source" do
-      expect(@file_attributes.source).to eq "http://example.com/app/views/patterns/_card.html.erb"
+      expect(@file_attributes.source).to eq view_source(@pattern_name)
     end
   end
 
   describe "file_attributes.destination" do
     it "returns the file destination" do
-      expect(@file_attributes.destination).to eq view_path("card")
+      expect(@file_attributes.destination).to eq view_path(@pattern_name)
     end
   end
 end

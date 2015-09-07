@@ -18,7 +18,7 @@ module PrefabPatterns
     attr_reader :locals, :pattern
 
     def view_file_path
-      Rails.root.join("app", "views", "patterns")
+      Rails.root.join("app", "views", "prefab_patterns")
     end
 
     def view_file_name

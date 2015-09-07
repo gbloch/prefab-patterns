@@ -2,7 +2,8 @@ require "spec_helper"
 
 RSpec.describe PrefabPatterns::FilePath do
   before do
-    @path = PrefabPatterns::FilePath.new("pattern")
+    @pattern_name = "pattern"
+    @path = PrefabPatterns::FilePath.new(@pattern_name)
     stub_const("FILE_PATH", "http://example.com/")
   end
 
@@ -10,7 +11,7 @@ RSpec.describe PrefabPatterns::FilePath do
     it "returns the correct source to import HTML from" do
       result = @path.view_source
 
-      expect(result).to eq "http://example.com/app/views/patterns/_pattern.html.erb"
+      expect(result).to eq view_source(@pattern_name)
     end
   end
 
@@ -26,7 +27,7 @@ RSpec.describe PrefabPatterns::FilePath do
     it "returns the correct source to import Coffee from" do
       result = @path.javascript_source
 
-      expect(result).to eq "http://example.com/app/assets/javascripts/patterns/pattern.coffee"
+      expect(result).to eq javascript_source(@pattern_name)
     end
   end
 
@@ -42,7 +43,7 @@ RSpec.describe PrefabPatterns::FilePath do
     it "returns the correct source to import Scss from" do
       result = @path.stylesheet_source
 
-      expect(result).to eq "http://example.com/app/assets/stylesheets/patterns/_pattern.scss"
+      expect(result).to eq stylesheet_source(@pattern_name)
     end
   end
 

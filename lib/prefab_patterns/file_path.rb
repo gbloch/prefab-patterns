@@ -33,15 +33,15 @@ module PrefabPatterns
     private
 
     def stylesheet_root
-      File.join("app", "assets", "stylesheets", "patterns")
+      File.join("app", "assets", "stylesheets", "prefab_patterns")
     end
 
     def javascript_root
-      File.join("app", "assets", "javascripts", "patterns")
+      File.join("app", "assets", "javascripts", "prefab_patterns")
     end
 
     def view_root
-      File.join("app", "views", "patterns")
+      File.join("app", "views", "prefab_patterns")
     end
   end
 end

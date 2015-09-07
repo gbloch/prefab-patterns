@@ -47,7 +47,7 @@ module PrefabPatterns
     end
 
     def views_path
-      File.join(Rails.root, "app", "views", "patterns")
+      File.join(Rails.root, "app", "views", "prefab_patterns")
     end
 
     def stylesheet_path(file_name)
@@ -55,7 +55,7 @@ module PrefabPatterns
     end
 
     def stylesheets_path
-      File.join(Rails.root, "app", "assets", "stylesheets", "patterns")
+      File.join(Rails.root, "app", "assets", "stylesheets", "prefab_patterns")
     end
 
     def javascript_path(file_name)
@@ -63,7 +63,7 @@ module PrefabPatterns
     end
 
     def javascripts_path
-      File.join(Rails.root, "app", "assets", "javascripts", "patterns")
+      File.join(Rails.root, "app", "assets", "javascripts", "prefab_patterns")
     end
   end
 end
