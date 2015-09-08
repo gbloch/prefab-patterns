@@ -7,7 +7,7 @@ ENV["RAILS_ENV"] ||= "test"
 
 require "helpers"
 require "prefab_patterns"
-require "pry-byebug"
+require "pry"
 require "rspec"
 require "webmock/rspec"
 

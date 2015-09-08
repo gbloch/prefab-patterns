@@ -1,6 +1,6 @@
 require "dummy/spec/rails_helper"
 
-RSpec.describe "View helpers", type: :feature do
+RSpec.feature"View helpers" do
   describe "#render_pattern" do
     before :each do
       visit "/"
@@ -26,6 +26,14 @@ RSpec.describe "View helpers", type: :feature do
       it "renders the pattern" do
         within "#two_arguments" do
           expect(page).to have_content "Title description"
+        end
+      end
+    end
+
+    context "with a partial being rendered from the same directory" do
+      it "renders the pattern" do
+        within "#pattern_with_partial_in_same_directory" do
+          expect(page).to have_content "Partial in same directory"
         end
       end
     end

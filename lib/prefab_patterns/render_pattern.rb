@@ -8,7 +8,8 @@ module PrefabPatterns
     end
 
     def render_pattern
-      controller = ActionController::Base.new
+      # controller = ActionController::Base.new
+      controller = ApplicationController.new
       view = ActionView::Base.new(view_file_path, {}, controller)
       view.render(file: view_file_name, locals: locals)
     end
